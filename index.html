@@ -38,8 +38,6 @@
         padding: 1em 0;
         background-color: rgb(53, 72, 100);
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 3;
       }
 
       a {
@@ -58,10 +56,10 @@
       }
 
       .site {
-        max-width: 620px;
+        width: 300px;
         margin: 2rem auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 20px;
       }
 
@@ -76,9 +74,15 @@
           0 6px 6px rgba(0, 0, 0, 0.23);
       }
 
-      @media only screen and (max-width: 480px) {
+      @media only screen and (min-width: 620px) {
         .site {
-          margin: 2em 1em;
+          width: 620px;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        header {
+          grid-column-start: 1;
+          grid-column-end: 3;
         }
       }
     </style>
