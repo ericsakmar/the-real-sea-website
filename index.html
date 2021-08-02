@@ -38,8 +38,8 @@
         padding: 1em 0;
         background-color: rgb(53, 72, 100);
         text-align: center;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-          0 6px 6px rgba(0, 0, 0, 0.23);
+        grid-column-start: 1;
+        grid-column-end: 3;
       }
 
       a {
@@ -57,42 +57,21 @@
         opacity: 0.75;
       }
 
-      .social-img-small {
-        width: 1rem;
-        margin-right: 0.25rem;
-        opacity: 0.75;
-      }
-
       .site {
-        max-width: 45rem;
+        max-width: 620px;
         margin: 2rem auto;
-      }
-
-      main {
-        text-align: center;
-      }
-
-      .video-wrapper {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%;
-        margin: 1rem 0;
-      }
-
-      .video-iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        border: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
       }
 
       .bandcamp-embed {
         border: 0;
         width: 300px;
         height: 392px;
-        margin: 1rem;
+      }
+
+      .card {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
           0 6px 6px rgba(0, 0, 0, 0.23);
       }
@@ -107,7 +86,7 @@
 
   <body>
     <div class="site">
-      <header>
+      <header class="card">
         <img src="header.png" alt="The Real Sea" class="header-img" />
 
         <a href="https://www.instagram.com/therealseamusic/">
@@ -188,35 +167,23 @@
         </a>
       </header>
 
-      <main>
-        <iframe
-          class="bandcamp-embed"
-          src="https://bandcamp.com/EmbeddedPlayer/track=2953283990/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-          seamless
-          ><a href="https://therealsea.bandcamp.com/track/paper-machete"
-            >Paper Machete by The Real Sea</a
-          ></iframe
-        >
+      <iframe
+        class="bandcamp-embed card"
+        src="https://bandcamp.com/EmbeddedPlayer/track=2953283990/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless
+        ><a href="https://therealsea.bandcamp.com/track/paper-machete"
+          >Paper Machete by The Real Sea</a
+        ></iframe
+      >
 
-        <iframe
-          class="bandcamp-embed"
-          src="https://bandcamp.com/EmbeddedPlayer/track=3111595504/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-          seamless
-          ><a href="https://therealsea.bandcamp.com/track/waitin-for-a-superman"
-            >Waitin&#39; For A Superman by The Real Sea</a
-          ></iframe
-        >
-
-        <!-- <div class="video-wrapper">
-          <iframe
-            class="video-iframe"
-            src="https://www.youtube.com/embed/zSPflsSFAqE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div> -->
-      </main>
+      <iframe
+        class="bandcamp-embed card"
+        src="https://bandcamp.com/EmbeddedPlayer/track=3111595504/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless
+        ><a href="https://therealsea.bandcamp.com/track/waitin-for-a-superman"
+          >Waitin&#39; For A Superman by The Real Sea</a
+        ></iframe
+      >
     </div>
   </body>
 </html>
